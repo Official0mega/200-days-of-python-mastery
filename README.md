@@ -87,7 +87,7 @@ This ensures **full transparency and accountability** throughout the challenge.
 
 > **Only tick a day after completing the day's task AND successfully pushing a Git commit.**
 
-- [ ] **Day 001** — Task completed + Git commit & push
+- [x] **Day 001** — Task completed + Git commit & push
 - [ ] **Day 002** — Task completed + Git commit & push
 - [ ] **Day 003** — Task completed + Git commit & push
 - [ ] **Day 004** — Task completed + Git commit & push

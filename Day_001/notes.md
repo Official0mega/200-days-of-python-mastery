@@ -1,7 +1,7 @@
 # Day 001
 
 ## Topic
-(To be updated)
+Day 1 Completed
 
 ## What I Learned
 - 
