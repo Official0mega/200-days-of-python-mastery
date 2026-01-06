@@ -1,5 +1,5 @@
 # Day 001
-Today_6th_January_2026
+Today_5th_January_2026
 ## Topic
 Day 1 Completed
 
