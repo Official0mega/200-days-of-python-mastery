@@ -18,4 +18,5 @@
 
 
 ## 200 Days Debugging
-- [Click Here](https://chatgpt.com/share/695c0ea4-e3e8-8005-a655-ad0d6f6de445)
+- [Click Here Part 1](https://chatgpt.com/share/695c0ea4-e3e8-8005-a655-ad0d6f6de445)
+- [Main Google Account(codeversehub@gmail.com)](https://chatgpt.com/c/695e5db4-65f4-832d-91c0-435c24982ed6)
