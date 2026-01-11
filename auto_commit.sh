@@ -6,6 +6,26 @@
 # Stop if any error happens
 set -e
 
+echo "🔐 Starting SSH agent..."
+
+# Start ssh-agent if not already running
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)"
+fi
+
+# Add SSH key (adjust path if needed)
+SSH_KEY="../SSH-KEY/Official0mega_id_rsa"
+
+if ssh-add -l >/dev/null 2>&1; then
+    echo "✅ SSH key already loaded."
+else
+    echo "➕ Adding SSH key..."
+    ssh-add "$SSH_KEY"
+fi
+
+echo "🔐 SSH authentication ready."
+echo "--------------------------------"
+
 # Read current day
 DAY=$(cat day.txt)
 
@@ -33,7 +53,7 @@ git push
 
 # Increment day
 NEXT_DAY=$((DAY + 1))
-echo $NEXT_DAY > day.txt
+echo "$NEXT_DAY" > day.txt
 
 # Commit the updated day counter
 git add day.txt
