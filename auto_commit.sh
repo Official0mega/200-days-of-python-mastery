@@ -6,22 +6,9 @@
 
 
 #!/bin/bash
-
-# Exit immediately if a command fails
 set -e
 
-echo "🔐 Initializing SSH authentication..."
-
-# Always start ssh-agent (safe on Windows Git Bash)
-eval "$(ssh-agent -s)" >/dev/null
-
-# SSH key path (relative to repo)
-SSH_KEY="../SSH-KEY/Official0mega_id_rsa"
-
-# Add SSH key silently (ignore if already added)
-ssh-add "$SSH_KEY" >/dev/null 2>&1 || true
-
-echo "✅ SSH authentication ready."
+echo "🚀 Auto Git Commit Started"
 echo "--------------------------------"
 
 # Ensure day.txt exists
@@ -33,7 +20,7 @@ fi
 # Read current day
 DAY=$(cat day.txt)
 
-# Validate day is a number
+# Validate day value
 if ! [[ "$DAY" =~ ^[0-9]+$ ]]; then
     echo "❌ Invalid day value in day.txt"
     exit 1
@@ -45,18 +32,17 @@ if [ "$DAY" -gt 200 ]; then
     exit 0
 fi
 
-# Prevent duplicate Day commits
+# Prevent duplicate commits
 if git log --oneline | grep -q "Day $DAY Completed"; then
     echo "⚠️ Day $DAY already committed. Skipping."
     exit 0
 fi
 
-echo "🚀 Committing Day $DAY..."
-
-# Stage all changes
+echo "📦 Staging files..."
 git add .
 
-# Commit changes (or empty commit if no changes)
+echo "✍️ Committing Day $DAY..."
+
 if git diff --cached --quiet; then
     echo "⚠️ No changes detected — creating empty commit."
     git commit --allow-empty -m "Day $DAY Completed"
@@ -64,20 +50,130 @@ else
     git commit -m "Day $DAY Completed"
 fi
 
-# Push Day commit
+echo "🌍 Pushing to GitHub..."
 git push
 
 # Increment day
 NEXT_DAY=$((DAY + 1))
 echo "$NEXT_DAY" > day.txt
 
-# Commit day counter update
+echo "🗓️ Preparing for Day $NEXT_DAY..."
 git add day.txt
 git commit -m "Prepare for Day $NEXT_DAY"
 git push
 
-echo "✅ Day $DAY successfully committed and pushed!"
+echo "--------------------------------"
+echo "✅ Day $DAY successfully committed & pushed!"
 echo "📅 Ready for Day $NEXT_DAY"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# #!/bin/bash
+
+# # Exit immediately if a command fails
+# set -e
+
+# echo "🔐 Initializing SSH authentication..."
+
+# # Always start ssh-agent (safe on Windows Git Bash)
+# eval "$(ssh-agent -s)" >/dev/null
+
+# # SSH key path (relative to repo)
+# SSH_KEY="../SSH-KEY/Official0mega_id_rsa"
+
+# # Add SSH key silently (ignore if already added)
+# ssh-add "$SSH_KEY" >/dev/null 2>&1 || true
+
+# echo "✅ SSH authentication ready."
+# echo "--------------------------------"
+
+# # Ensure day.txt exists
+# if [ ! -f day.txt ]; then
+#     echo "❌ day.txt not found. Create it and put the starting day inside."
+#     exit 1
+# fi
+
+# # Read current day
+# DAY=$(cat day.txt)
+
+# # Validate day is a number
+# if ! [[ "$DAY" =~ ^[0-9]+$ ]]; then
+#     echo "❌ Invalid day value in day.txt"
+#     exit 1
+# fi
+
+# # Safety check
+# if [ "$DAY" -gt 200 ]; then
+#     echo "🎉 200 Days Completed. Challenge finished!"
+#     exit 0
+# fi
+
+# # Prevent duplicate Day commits
+# if git log --oneline | grep -q "Day $DAY Completed"; then
+#     echo "⚠️ Day $DAY already committed. Skipping."
+#     exit 0
+# fi
+
+# echo "🚀 Committing Day $DAY..."
+
+# # Stage all changes
+# git add .
+
+# # Commit changes (or empty commit if no changes)
+# if git diff --cached --quiet; then
+#     echo "⚠️ No changes detected — creating empty commit."
+#     git commit --allow-empty -m "Day $DAY Completed"
+# else
+#     git commit -m "Day $DAY Completed"
+# fi
+
+# # Push Day commit
+# git push
+
+# # Increment day
+# NEXT_DAY=$((DAY + 1))
+# echo "$NEXT_DAY" > day.txt
+
+# # Commit day counter update
+# git add day.txt
+# git commit -m "Prepare for Day $NEXT_DAY"
+# git push
+
+# echo "✅ Day $DAY successfully committed and pushed!"
+# echo "📅 Ready for Day $NEXT_DAY"
 
 
 
