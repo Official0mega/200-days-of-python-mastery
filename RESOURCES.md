@@ -16,6 +16,52 @@
 ## 200 Days Full ChatGPT Link (Python-DataSciience)
 - [Click Me](https://chatgpt.com/share/695cc411-a958-8004-877b-496a3f6e4edf)
 
+## Understanding_Better_200_Days_Explanation
+[Link](https://chatgpt.com/c/69660cee-7be4-8332-a715-3d21528feb24)
+
+## Complete 200 Days Summary - Google Account(codeversehub@gmail.com)
+[Code Summary Link](https://chatgpt.com/c/695e5db4-65f4-832d-91c0-435c24982ed6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 200 Days Debugging and Code Summary (Notes and Code)
 - [Click Here Part 1](https://chatgpt.com/share/695c0ea4-e3e8-8005-a655-ad0d6f6de445)
