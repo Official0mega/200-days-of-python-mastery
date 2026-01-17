@@ -20,6 +20,7 @@ echo "✍️ Creating micro commit..."
 git commit -m "Progress update at $TIMESTAMP"
 
 echo "🌍 Pushing to GitHub..."
-git push
+# git push
+git push https://Official0mega@github.com/Official0mega/200-days-of-python-mastery.git 
 
 echo "✅ Micro commit pushed successfully"
