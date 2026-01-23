@@ -11,7 +11,7 @@
 
 
 
-Improved code readability
+
 
 Worked on challenge tasks
 
