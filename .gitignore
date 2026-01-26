@@ -2,6 +2,7 @@
 ~$*
 ~WRD2351.tmp
 ~WRD*.tmp
+~WRL*.tmp
 .env
 
 # Logs
